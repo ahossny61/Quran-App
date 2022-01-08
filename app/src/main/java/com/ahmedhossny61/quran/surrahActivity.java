@@ -1,0 +1,154 @@
+package com.ahmedhossny61.quran;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+public class surrahActivity extends AppCompatActivity {
+    private String id;
+    private ListView listView;
+    private ArrayList<String> surrahs;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_surrah);
+        surrahs=new ArrayList<>();
+        surrahs.add("سُورَةُ ٱلْفَاتِحَةِ");
+        surrahs.add("سورة البقرة");
+        surrahs.add("سورة آل عمران");
+        surrahs.add("سورة النساء");
+        surrahs.add("سورة المائدة");
+        surrahs.add("سورة الأنعام");
+        surrahs.add("سورة الأعراف");
+        surrahs.add("سورة الأنفال");
+        surrahs.add("سورة التوبة");
+        surrahs.add("سورة يونس");
+        surrahs.add("سورة هود");
+        surrahs.add("سورة يوسف");
+        surrahs.add("سورة الرعد");
+        surrahs.add("سورة ابراهيم");
+        surrahs.add( "سورة الحجر");
+        surrahs.add("سورة النحل");
+        surrahs.add( "سورة الإسراء");
+        surrahs.add("سورة الكهف");
+        surrahs.add("سورة مريم");
+        surrahs.add("سورة طه");
+        surrahs.add("سورة الأنبياء");
+        surrahs.add("سورة الحج");
+        surrahs.add("سورة المؤمنون");
+        surrahs.add("سورة النور");
+        surrahs.add("سورة الفرقان");
+        surrahs.add("سورة الشعراء");
+        surrahs.add("سورة النمل");
+        surrahs.add("سورة القصص");
+        surrahs.add("سورة العنكبوت");
+        surrahs.add("سورة الروم");
+        surrahs.add("سورة لقمان");
+        surrahs.add("سورة السجدة");
+        surrahs.add( "سورة الأحزاب");
+        surrahs.add("سورة سَبَأ");
+        surrahs.add("سورة فاطر");
+        surrahs.add("سورة يس");
+        surrahs.add("سورة الصافات");
+        surrahs.add("سورة ص");
+        surrahs.add( "سورة الزمر");
+        surrahs.add("سورة غافر");
+        surrahs.add("سورة فصلت");
+        surrahs.add("سورة الشورى");
+        surrahs.add("سورة الزخرف");
+        surrahs.add("سورة الدخان");
+        surrahs.add("سورة الجاثية");
+        surrahs.add("سورة الأحقاف");
+        surrahs.add("سورة محمد");
+        surrahs.add("سورة الفتح");
+        surrahs.add("سورة الحجرات");
+        surrahs.add("سورة ق");
+        surrahs.add("سورة الذاريات");
+        surrahs.add("سورة الطور");
+        surrahs.add("سورة النجم");
+        surrahs.add("سورة القمر");
+        surrahs.add("سورة الرحمن");
+        surrahs.add("سورة الواقعة");
+        surrahs.add( "سورة الحديد");
+        surrahs.add("سورة المجادلة");
+        surrahs.add( "سورة الحشر");
+        surrahs.add("سورة الممتحنة");
+        surrahs.add("سورة الصف");
+        surrahs.add("سورة الجمعة");
+        surrahs.add("سورة المنافقون");
+        surrahs.add("سورة التغابن");
+        surrahs.add("سورة الطلاق");
+        surrahs.add("سورة التحريم");
+        surrahs.add("سورة الملك");
+        surrahs.add("سورة القلم");
+        surrahs.add("سورة الحاقة");
+        surrahs.add("سورة المعارج");
+        surrahs.add("سورة نوح");
+        surrahs.add("سورة الجن");
+        surrahs.add("سورة المزمل");
+        surrahs.add("سورة المدثر");
+        surrahs.add("سورة القيامة");
+        surrahs.add("سورة الانسان");
+        surrahs.add("سورة المرسلات");
+        surrahs.add( "سورة النبأ");
+        surrahs.add("سورة النازعات");
+        surrahs.add("سورة عبس");
+        surrahs.add( "سورة التكوير");
+        surrahs.add("سورة الإنفطار");
+        surrahs.add("سورة المطففين");
+        surrahs.add( "سورة الإنشقاق");
+        surrahs.add("سورة البروج");
+        surrahs.add("سورة الطارق");
+        surrahs.add("سورة الأعلى");
+        surrahs.add("سورة الغاشية");
+        surrahs.add("سورة الفجر");
+        surrahs.add("سورة البلد");
+        surrahs.add("سورة الشمس");
+        surrahs.add( "سورة الليل");
+        surrahs.add("سورة الضحى");
+        surrahs.add("سورة الشرح");
+        surrahs.add("سورة التين");
+        surrahs.add( "سورة العلق");
+        surrahs.add("سورة القدر");
+        surrahs.add("سورة البينة");
+        surrahs.add("سورة الزلزلة");
+        surrahs.add("سورة العاديات");
+        surrahs.add("سورة القارعة");
+        surrahs.add("سورة التكاثر");
+        surrahs.add("سورة العصر");
+        surrahs.add("سورة الهمزة");
+        surrahs.add( "سورة الفيل");
+        surrahs.add("سورة قريش");
+        surrahs.add( "سورة الماعون");
+        surrahs.add("سورة الكوثر");
+        surrahs.add("سورة الكافرون");
+        surrahs.add("سورة النصر");
+        surrahs.add("سورة المسد");
+        surrahs.add("سورة الإخلاص");
+        surrahs.add("سورة الفلق");
+        surrahs.add("سورة الناس");
+        Bundle bundle=getIntent().getExtras();
+         id =bundle.getString("id");
+        ArrayAdapter<String> mAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,surrahs);
+        listView=findViewById(R.id.Custom_list2);
+        listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int number =i;
+                Intent intent=new Intent(surrahActivity.this,ayaActivity.class);
+                intent.putExtra("Number",number);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
+    }
+
+}
